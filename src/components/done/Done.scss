@@ -1,0 +1,33 @@
+.done-container {
+  flex-basis: 30%;
+  border-radius: 50px;
+  background: #55b9f3;
+  box-shadow: 20px 20px 60px #489dcf, -20px -20px 60px #62d5ff;
+  margin-top: 50px;
+}
+
+.button-container button {
+  border-radius: 50px;
+  background-color: #ffff;
+  border: none;
+  padding-top: 5px;
+}
+
+.todo-content span {
+  flex-basis: 60%;
+  color: #ffff;
+}
+
+.todo-content {
+  padding: 20px;
+}
+
+.todo-list {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 50px;
+  background: #55b9f3;
+  box-shadow: 20px 20px 60px #489dcf, -20px -20px 60px #62d5ff;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+}

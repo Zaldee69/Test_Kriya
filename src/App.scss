@@ -1,0 +1,32 @@
+$body-color: #55b9f3;
+$text-color: #ffff;
+$box-shadow: 20px 20px 60px #489dcf, -20px -20px 60px #62d5ff;
+
+body {
+  background-color: $body-color;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.App {
+  margin: 100px auto;
+  padding: 0 50px;
+}
+
+.App h1 {
+  text-align: center;
+  color: $text-color;
+}
+
+.home-container {
+  justify-content: space-around;
+  display: flex;
+  border-radius: 50px;
+  background: $body-color;
+  box-shadow: $box-shadow;
+  height: 500px;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}

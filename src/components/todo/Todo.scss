@@ -1,0 +1,41 @@
+$todo-background: #e0e0e0;
+$font-color: #ffff;
+
+.todo-container {
+  border-radius: 50px;
+  background: #55b9f3;
+  box-shadow: 20px 20px 60px #489dcf, -20px -20px 60px #62d5ff;
+  flex-basis: 30%;
+  margin-top: 50px;
+}
+
+.todo-container h1 {
+  color: $font-color;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.input-container input {
+  width: 60%;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 0;
+}
+
+.input-container button {
+  background-color: $font-color;
+  border: none;
+  border-radius: 4px;
+}
+
+.button-container {
+  flex-basis: 30%;
+  display: flex;
+  justify-content: end;
+  gap: 2px;
+  align-items: center;
+}
