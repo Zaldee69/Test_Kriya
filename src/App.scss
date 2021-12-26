@@ -11,7 +11,7 @@ body {
 }
 
 .App {
-  margin: 100px auto;
+  margin: 50px auto;
   padding: 0 50px;
 }
 
@@ -23,10 +23,28 @@ body {
 .home-container {
   justify-content: space-around;
   display: flex;
+  height: 500px;
+}
+
+.container {
   border-radius: 50px;
   background: $body-color;
   box-shadow: $box-shadow;
-  height: 500px;
   margin-top: 50px;
   padding-bottom: 50px;
+  justify-content: center;
+  transition: all 1s;
+}
+
+.trash {
+  justify-content: center;
+  margin-top: 50px;
+  display: flex;
+}
+
+.trash svg {
+  background: $body-color;
+  box-shadow: $box-shadow;
+  padding: 50px;
+  border-radius: 50%;
 }
