@@ -1,6 +1,13 @@
 import { MdDelete } from "react-icons/md";
 
-const DeleteButton = () => {
+interface ToggleProps {
+  ClickHandler: (
+    event: React.MouseEvent<HTMLButtonElement>,
+    id: number
+  ) => void;
+}
+
+const DeleteButton = (edit: ToggleProps) => {
   return (
     <div>
       <button>

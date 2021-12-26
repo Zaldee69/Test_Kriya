@@ -1,12 +1,11 @@
 import "./App.scss";
-import { MdDelete } from "react-icons/md";
 import Done from "./components/done/Done";
 import OnProgress from "./components/onProg/OnProgress";
 import Todo from "./components/todo/Todo";
 import { TodoContext } from "./context/TodoProvider";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import ProgressBar from "./components/progressBar/ProgressBar";
-import { DragDropContext, Droppable, DropResult } from "react-beautiful-dnd";
+import { DragDropContext, DropResult } from "react-beautiful-dnd";
 
 function App() {
   const { initialValue, dispatch } = useContext(TodoContext);
@@ -20,8 +19,6 @@ function App() {
   const onDragEnd = (result: DropResult) => {
     const { source, destination } = result;
 
-    console.log(destination, result);
-
     if (!destination) return;
     initialValue.forEach((items: any) => {
       if (
@@ -29,6 +26,23 @@ function App() {
         destination.droppableId === "Progress"
       ) {
         items.onProgress = true;
+        localStorage.setItem("todo", JSON.stringify(initialValue));
+      } else if (
+        source.droppableId === "Done" &&
+        destination.droppableId === "Progress"
+      ) {
+        initialValue.map((items: any) => {
+          if (items.id === parseInt(result.draggableId)) {
+            items.isDone = false;
+            localStorage.setItem("todo", JSON.stringify(initialValue));
+          }
+        });
+      } else if (
+        source.droppableId === "Progress" &&
+        destination.droppableId === "Todo" &&
+        items.id === parseInt(result.draggableId)
+      ) {
+        items.onProgress = false;
         localStorage.setItem("todo", JSON.stringify(initialValue));
       } else if (
         items.onProgress &&

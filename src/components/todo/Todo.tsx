@@ -6,6 +6,7 @@ import { MdDelete } from "react-icons/md";
 import { useState, MouseEvent, useContext } from "react";
 import { Draggable, Droppable } from "react-beautiful-dnd";
 import { TodoContext } from "../../context/TodoProvider";
+import DeleteButton from "../molecules/atom/button/DeleteButton";
 const Todo = () => {
   interface editInterFace {
     id: number;
@@ -85,6 +86,7 @@ const Todo = () => {
           className="todo-container"
         >
           <h1>Todo</h1>
+
           <div>
             <div className="input-container">
               <input
